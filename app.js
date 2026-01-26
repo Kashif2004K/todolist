@@ -1,9 +1,10 @@
 const btn = document.querySelector(".btn");
 const ul = document.querySelector("ul");
-const li = document.querySelector("li");
 const input = document.querySelector(".input");
 
-btn.addEventListener("click", (e) => {
-  li.textContent = input.text;
+btn.addEventListener("click", () => {
+  const li = document.createElement("li");
+  li.textContent = input.value;
   ul.appendChild(li);
+  input.value = " ";
 });
