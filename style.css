@@ -45,10 +45,22 @@ ul {
 }
 
 li {
-  margin-bottom: 0.6rem;
   font-size: 1.2rem;
   list-style: none;
   text-align: center;
   background-color: rgb(253, 253, 110);
   padding: 0.6rem;
+  min-width: 20rem;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.todo-item button {
+  padding: 0.1rem 0.6rem;
+  border-radius: 8px;
 }

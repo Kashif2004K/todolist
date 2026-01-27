@@ -2,12 +2,17 @@ const btn = document.querySelector(".btn");
 const ul = document.querySelector("ul");
 const input = document.querySelector(".input");
 
-btn.addEventListener("click", () => {
+const addToDo = () => {
   const li = document.createElement("li");
   const delBtn = document.createElement("button");
+  const div = document.createElement("div");
+  div.classList.add("todo-item");
   delBtn.textContent = "Delete";
   li.textContent = input.value;
-  ul.appendChild(li);
-  ul.appendChild(delBtn);
+  div.appendChild(li);
+  div.appendChild(delBtn);
+  ul.appendChild(div);
   input.value = " ";
-});
+};
+
+btn.addEventListener("click", addToDo);
