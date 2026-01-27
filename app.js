@@ -7,6 +7,7 @@ const addToDo = () => {
   const delBtn = document.createElement("button");
   const div = document.createElement("div");
   div.classList.add("todo-item");
+  delBtn.classList.add("delete-btn");
   delBtn.textContent = "Delete";
   li.textContent = input.value;
   div.appendChild(li);
@@ -16,7 +17,7 @@ const addToDo = () => {
 };
 
 const deleteToDo = (e) => {
-  if (e.target.tagName === "BUTTON") {
+  if (e.target.classList.contains("delete-btn")) {
     const item = e.target.parentElement;
     ul.removeChild(item);
   }
