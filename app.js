@@ -12,7 +12,15 @@ const addToDo = () => {
   div.appendChild(li);
   div.appendChild(delBtn);
   ul.appendChild(div);
-  input.value = " ";
+  input.value = "";
 };
 
+const deleteToDo = (e) => {
+  if (e.target.tagName === "BUTTON") {
+    const item = e.target.parentElement;
+    ul.removeChild(item);
+  }
+};
+
+ul.addEventListener("click", deleteToDo);
 btn.addEventListener("click", addToDo);
